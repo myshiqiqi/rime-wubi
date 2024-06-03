@@ -40,7 +40,7 @@ style:
   spacing: 8                                          # 编码区与候选项之间的边距，当 inline_preedit: false 时可用
   shadow_size: 0                                      # 高亮候选项周围的阴影，0 值时表示阴影不生效
   surrounding_extra_expansion: 0                      # 非高亮候选项相对于高亮候选的大小，负数表示缩小，正数表示放大
-  candidate_format: '[label]. [candidate] [comment]'  # 定义标签、候选及注解的格式
+  candidate_format: '[label] [candidate] [comment]'  # 定义标签、候选及注解的格式
   base_offset: 0                                      # 调整文本位置的偏移量
   font_face: 'Avenir'                                 # 全局文本的字体
   font_point: 18                                      # 全局文本的字号
