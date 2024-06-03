@@ -9,6 +9,7 @@ schema_list:
   - {schema: wubi}
   - {schema: wubi_pinyin}
   - {schema: pinyin}
+  - {schema: wb_spelling}
 
 switcher:
   caption: 〈菜单项〉
