@@ -33,5 +33,5 @@ installation.yaml
 user.yaml
 settings.json
 *.userdb/
-*.txt
+/*.txt
 /*.custom.yaml
