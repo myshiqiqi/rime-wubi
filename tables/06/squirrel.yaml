@@ -1,67 +1,142 @@
 # Squirrel settings
 # encoding: utf-8
 # by: 空山明月
-# date: 2024-05-27
+# date: 2024-6-3
 
-config_version: '0.38'
-keyboard_layout: last
-chord_duration: 0.1  # seconds
-show_notifications_when: appropriate
+config_version: '1.0'                                # 配置文件的版本号
 
+# 参数: last | default | _custom_
+# last: 保留上次的布局模式
+# default: 默认标准的英文模式布局
+# _custom_: 自定义布局类型
+#    例如 'com.apple.keylayout.USExtended'
+#    也可简写为 'USExtended'
+keyboard_layout: last                                # 键盘布局方式
+
+chord_duration: 0.1                                  # 并击时的延时，单位秒
+
+# 参数: always | never | appropriate
+# always: 总是显示
+# never: 从不显示
+# appropriate: 在合适的时机显示
+show_notifications_when: appropriate                  # 显示通知消息
+
+# 主题外观样式
 style:
-  color_scheme: poetry_plum
-  color_scheme_dark: dark_plum
-  text_orientation: horizontal  # horizontal | vertical
-  inline_preedit: true
-  corner_radius: 10
-  hilited_corner_radius: 0
-  border_height: 0
-  border_width: 0
-  # space between candidates in stacked layout
-  line_spacing: 5
-  # space between preedit and candidates in non-inline mode
-  spacing: 10
-  candidate_format: '%c %@'
-  # adjust the base line of vertical text
-  #base_offset: 6
-  font_face: 'Lucida Grande'
-  font_point: 21
-  label_font_face: 'Lucida Grande'
-  label_font_point: 18
-  comment_font_face: 'Lucida Grande, 雅黑字根, 黑体字根'
-  comment_font_point: 18
+  color_scheme: poetry_plum                           # 日间主题
+  color_scheme_dark: dark_plum                        # 夜间主题
+  candidate_list_layout: stacked                      # 候选项布局模式，stacked: 堆栈式，linear: 线性式
+  text_orientation: horizontal                        # 文字方向，horizontal: 水平，vertical：垂直
+  inline_preedit: true                                # 是否启用内联预编辑模式，true 行内模式，false 预编辑模式
+  inline_candidate: false                             # 是否将选中的文本嵌入到输入框
+  memorize_size: true                                 # 候选框是否紧贴屏幕边缘以减少跳动
+  mutual_exclusive: false                             # 透明色是否相互叠加
+  translucency: false                                 # 是否使用半透明背景；仅当背景颜色为透明时可用
+  corner_radius: 7                                    # 背景框圆解半径值
+  hilited_corner_radius: 0                            # 高亮候选项圆解半径值
+  border_height: -2                                   # 边框高度值
+  border_width: -2                                    # 边框宽度值
+  line_spacing: 5                                     # 候选项之间的边距值，当 candidate_list_layout: stacked 时可用
+  spacing: 8                                          # 编码区与候选项之间的边距，当 inline_preedit: false 时可用
+  shadow_size: 0                                      # 高亮候选项周围的阴影，0 值时表示阴影不生效
+  surrounding_extra_expansion: 0                      # 非高亮候选项相对于高亮候选的大小，负数表示缩小，正数表示放大
+  candidate_format: '[label]. [candidate] [comment]'  # 定义标签、候选及注解的格式
+  base_offset: 0                                      # 调整文本位置的偏移量
+  font_face: 'Avenir'                                 # 全局文本的字体
+  font_point: 18                                      # 全局文本的字号
+  label_font_face: 'Avenir'                           # 标签的字体
+  label_font_point: 16                                # 标签的字号
+  comment_font_face: 'Avenir, 黑体字根'                # 注解的字体
+  comment_font_point: 15                              # 注解的字号
 
+# 主题集合
 preset_color_schemes:
   native:
     name: 系統配色
 
+  poetry_spring:
+    name: 诗意之春／Poetry Spring
+    author: 空山明月 <mrshiqiqi@126.com>
+    text_color: 0x333333                              # 文本色
+    back_color: 0xe3fbe6                              # 背景色
+    label_color: 0x5c5c5c                             # 标签色
+    hilited_text_color: 0x333333                      # 编码文本色
+    candidate_text_color: 0x333333                    # 非高亮候选文本色
+    comment_text_color: 0x5c5c5c                      # 非高亮注解文本色
+    hilited_candidate_label_color: 0xFFFFFF           # 高亮标签色
+    hilited_candidate_text_color: 0xFFFFFF            # 高亮候选文本色
+    hilited_candidate_back_color: 0x35922a            # 高亮候选背景色
+    hilited_comment_text_color: 0xFFFFFF              # 高亮注解文本色
+
+  dark_spring:
+    name: 春夜阑珊／Dark Spring
+    author: 空山明月 <mrshiqiqi@126.com>
+    text_color: 0xFFFFFF                              # 文本色
+    back_color: 0x4b4848                              # 背景色
+    label_color: 0xe0e0e0                             # 标签色
+    hilited_text_color: 0xFFFFFF                      # 编码文本色
+    candidate_text_color: 0xFFFFFF                    # 非高亮候选文本色
+    comment_text_color: 0xe0e0e0                      # 非高亮注解文本色
+    hilited_candidate_label_color: 0xe0e0e0           # 高亮标签色
+    hilited_candidate_text_color: 0xFFFFFF            # 高亮候选文本色
+    hilited_candidate_back_color: 0x35922a            # 高亮候选背景色
+    hilited_comment_text_color: 0xe0e0e0              # 高亮注解文本色
+
+  poetry_ocean:
+    name: 诗意之海／Poetry Ocean
+    author: 空山明月 <mrshiqiqi@126.com>
+    text_color: 0x333333                              # 文本色
+    back_color: 0xFEE6D3                              # 背景色
+    label_color: 0x333333                             # 标签色
+    hilited_text_color: 0x333333                      # 编码文本色
+    candidate_text_color: 0x333333                    # 非高亮候选文本色
+    comment_text_color: 0x333333                      # 非高亮注解文本色
+    hilited_candidate_label_color: 0xFFFFFF           # 高亮标签色
+    hilited_candidate_text_color: 0xFFFFFF            # 高亮候选文本色
+    hilited_candidate_back_color: 0xB5513F            # 高亮候选背景色
+    hilited_comment_text_color: 0xFFFFFF              # 高亮注解文本色
+
+  dark_ocean:
+    name: 深海无垠／Dark Ocean
+    author: 空山明月 <mrshiqiqi@126.com>
+    text_color: 0xFFFFFF                              # 文本色
+    back_color: 0x4b4848                              # 背景色
+    label_color: 0xe0e0e0                             # 标签色
+    hilited_text_color: 0xFFFFFF                      # 编码文本色
+    candidate_text_color: 0xFFFFFF                    # 非高亮候选文本色
+    comment_text_color: 0xe0e0e0                      # 非高亮注解文本色
+    hilited_candidate_label_color: 0xe0e0e0           # 高亮标签色
+    hilited_candidate_text_color: 0xFFFFFF            # 高亮候选文本色
+    hilited_candidate_back_color: 0xB5513F            # 高亮候选背景色
+    hilited_comment_text_color: 0xe0e0e0              # 高亮注解文本色
+
   poetry_plum:
     name: 诗意之梅／Poetry Plum
     author: 空山明月 <mrshiqiqi@126.com>
-    text_color: 0x333333
-    back_color: 0xF5EEFC
-    label_color: 0x333333
-    candidate_text_color: 0x333333
-    hilited_text_color: 0x333333
-    hilited_candidate_label_color: 0xFFFFFF
-    hilited_candidate_text_color: 0xFFFFFF
-    hilited_candidate_back_color: 0x4926bb
-    comment_text_color: 0x333333
-    hilited_comment_text_color: 0xFFFFFF
+    text_color: 0x333333                              # 文本色
+    back_color: 0xF5EEFC                              # 背景色
+    label_color: 0x333333                             # 标签色
+    hilited_text_color: 0x333333                      # 编码文本色
+    candidate_text_color: 0x333333                    # 非高亮候选文本色
+    comment_text_color: 0x333333                      # 非高亮注解文本色
+    hilited_candidate_label_color: 0xFFFFFF           # 高亮标签色
+    hilited_candidate_text_color: 0xFFFFFF            # 高亮候选文本色
+    hilited_candidate_back_color: 0x4926bb            # 高亮候选背景色
+    hilited_comment_text_color: 0xFFFFFF              # 高亮注解文本色
 
   dark_plum:
     name: 夜梅来香／Dark Plum
     author: 空山明月 <mrshiqiqi@126.com>
-    text_color: 0xFFFFFF
-    back_color: 0x4b4848
-    label_color: 0xe0e0e0
-    candidate_text_color: 0xFFFFFF
-    hilited_text_color: 0xFFFFFF
-    hilited_candidate_label_color: 0xe0e0e0
-    hilited_candidate_text_color: 0xFFFFFF
-    hilited_candidate_back_color: 0x4926bb
-    comment_text_color: 0xe0e0e0
-    hilited_comment_text_color: 0xe0e0e0
+    text_color: 0xFFFFFF                              # 文本色
+    back_color: 0x4b4848                              # 背景色
+    label_color: 0xe0e0e0                             # 标签色
+    hilited_text_color: 0xFFFFFF                      # 编码文本色
+    candidate_text_color: 0xFFFFFF                    # 非高亮候选文本色
+    comment_text_color: 0xe0e0e0                      # 非高亮注解文本色
+    hilited_candidate_label_color: 0xe0e0e0           # 高亮标签色
+    hilited_candidate_text_color: 0xFFFFFF            # 高亮候选文本色
+    hilited_candidate_back_color: 0x4926bb            # 高亮候选背景色
+    hilited_comment_text_color: 0xe0e0e0              # 高亮注解文本色
 
 app_options:
   com.apple.Spotlight:
