@@ -111,6 +111,12 @@ end
 
 local function isgb2312(cand, env)
 	local ctext = cand.text
+
+	-- 〇 作为日期显示，不参加生僻字过滤
+	if string.find(ctext, "〇") then
+		return 1
+	end
+
 	if utf8.len(ctext) == 1 then
 		local spll_raw = env.spll_rvdb:lookup(ctext)
 		if spll_raw ~= '' then
@@ -129,7 +135,6 @@ local function isgb2312(cand, env)
 				if chars:find("GBK") then return 0 else flag=1 end
 			end
 		end
-
 		return flag
 	end
 end

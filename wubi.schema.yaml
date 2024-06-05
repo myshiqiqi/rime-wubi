@@ -87,7 +87,7 @@ engine:
     - "table_translator@rvl_zhuyin"
     - "history_translator@history"
     - "lua_translator@helper"
-    - "lua_translator@time_date"
+    - lua_translator@*date_translator
     - "lua_translator@calculator"
 
 speller:
