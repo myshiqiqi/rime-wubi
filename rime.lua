@@ -788,15 +788,15 @@ function str2datetime_translator(input, seg)
 	end
 end
 
-function time_date(input, seg, env)
-	date_translator(input, seg)
-	time_translator(input, seg)
-	week_translator(input, seg)
+function test(input, seg, env)
+	-- date_translator(input, seg)
+	-- time_translator(input, seg)
+	-- week_translator(input, seg)
 	lunar_translator(input, seg)
 	Jq_translator(input, seg)
 	-- longstring_translator(input, seg)
 	QueryLunar_translator(input, seg)
 	-- number_translator(input, seg)
 	set_switch_keywords(input, seg,env)
-	str2datetime_translator(input, seg)
+	-- str2datetime_translator(input, seg)
 end

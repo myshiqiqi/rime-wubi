@@ -55,6 +55,7 @@ engine:
     - table_translator
     - lua_translator@*date_ts
     - lua_translator@*date_extend_ts
+    - lua_translator@test
     - "lua_translator@calculator"
     - "lua_translator@helper"
   filters:

@@ -125,6 +125,30 @@ local function get_time(input, seg)
     yield(Candidate(input, seg.start, seg._end, num_to_cnnum(tostring(os.date("%H"))).."时"..num_to_cnnum(tostring(os.date("%M"))).."分"..num_to_cnnum(tostring(os.date("%S"))).."秒", "〈时间〉"))
 end
 
+-- 公用函数，供外部调用
+function GetDate(input, seg)
+    get_date(input, seg)
+end
+
+-- 公用函数，供外部调用
+function GetWeek(input, seg)
+    get_week(input, seg)
+end
+
+-- 公用函数，供外部调用
+function GetTime(input, seg)
+    get_time(input, seg)
+end
+
+-- 公用函数，供外部调用
+function DateToCnStr(strDate)
+    return date_to_cnstr(strDate)
+end
+
+-- 公用函数，供外部调用
+function GetDateNums(date)
+    return get_date_nums(date)
+end
 
 -- 转换器入口
 local function translator(input, seg)

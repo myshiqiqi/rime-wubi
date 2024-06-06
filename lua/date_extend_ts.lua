@@ -15,11 +15,14 @@ local function addDaysToDate(days, format)
 end
 
 -- 从当前日期向前或向后计算
-local function somedate_translator(input, seg, days)
-    yield(Candidate(input, seg.start, seg._end, addDaysToDate(days, "%Y年%m月%d日"), "〈日期〉"))
+local function somedate_translator(input, seg, days) 
+    local dt_nums = GetDateNums(addDaysToDate(days, "%Y.%m.%d"))
+    local dt_str = dt_nums[1].."年"..dt_nums[2].."月"..dt_nums[3].."日"
+    yield(Candidate(input, seg.start, seg._end, dt_str, "〈日期〉"))
     yield(Candidate(input, seg.start, seg._end, addDaysToDate(days, "%Y-%m-%d"), "〈日期〉"))
     yield(Candidate(input, seg.start, seg._end, addDaysToDate(days, "%Y%m%d"), "〈日期〉"))
-    yield(Candidate(input, seg.start, seg._end, date_to_cnstr(addDaysToDate(days, "%Y.%m.%d")), "〈日期〉"))
+    yield(Candidate(input, seg.start, seg._end, addDaysToDate(days, "%Y年%m月%d日"), "〈日期〉"))
+    yield(Candidate(input, seg.start, seg._end, DateToCnStr(addDaysToDate(days, "%Y.%m.%d")), "〈日期〉"))
 end
 
 -- 获取本月相邻月份同一天时的日期
@@ -98,7 +101,7 @@ local function str_to_datetime(input, seg)
 
 	-- 输出今天的日期
 	if (input == str_date_time["today"]) then
-		date_translator("date", seg)
+		GetDate("date", seg)
 	end
 
 	-- 输出明天的日期
@@ -123,12 +126,12 @@ local function str_to_datetime(input, seg)
 
 	-- 输出当前时间
 	if (input == str_date_time["time"]) then
-		time_translator("time", seg)
+		GetTime("time", seg)
 	end
 
 	-- 输出本周时间：表示本周的当天时间
 	if (input == str_date_time["this_week"]) then
-		date_translator("date", seg)
+		GetDate("date", seg)
 	end
 
 	-- 输出上周时间：表示上周对应星期时间
@@ -145,7 +148,7 @@ local function str_to_datetime(input, seg)
 
 	-- 输出本月日期，默认是本月当天日期
 	if (input == str_date_time["this_month"]) then
-		date_translator("date", seg)
+		GetDate("date", seg)
 	end
 
 	-- 输出上月与当天天数相同的日期，有末则按最后一天计算
