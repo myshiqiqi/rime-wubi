@@ -30,9 +30,6 @@ switches:
   - name: new_spelling
     reset: 1
     states: [ 隐,显 ]
-  - name: rvl_zhuyin
-    reset: 1
-    states: [ 形,拼 ]
   - name: GB2312
     reset: 1
     states: [ 扩,常 ]
