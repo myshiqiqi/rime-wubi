@@ -27,6 +27,9 @@ switches:
   - name: new_spelling
     # reset: 1
     states: [ 隐,显 ]
+  - name: new_hide_pinyin
+    # reset: 1
+    states: [ 音,哑 ]
   - name: GB2312
     # reset: 1
     states: [ 扩,常 ]
@@ -39,9 +42,6 @@ switches:
   # - name: ascii_mode
   #   reset: 0
   #   states: [ 中,英 ]  
-  # - name: new_hide_pinyin
-  #   reset: 1
-  #   states: [ 音,哑 ]
   # - name: ascii_punct
   #   reset: 0
   #   states: [ 。，,．， ]
