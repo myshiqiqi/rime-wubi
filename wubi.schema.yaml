@@ -19,32 +19,32 @@ schema:
     - wb_spelling
 switches:
   - name: show_es
-    reset: 0
-    states: [ 💀, 😄 ]
-  - name: ascii_mode
-    reset: 0
-    states: [ 中,英 ]    
+    # reset: 0
+    states: [ 💀, 😄 ]  
   - name: zh_trad
-    reset: 0
+    # reset: 0
     states: [ 简,繁 ]
   - name: new_spelling
-    reset: 1
+    # reset: 1
     states: [ 隐,显 ]
   - name: GB2312
-    reset: 1
+    # reset: 1
     states: [ 扩,常 ]
-  - name: new_hide_pinyin
-    reset: 1
-    states: [ 音,哑 ]
   - name: single_char
-    reset: 0
+    # reset: 0
     states: [ 词,单 ]
-  - name: ascii_punct
-    reset: 0
-    states: [ 。，,．， ]
   - name: full_shape
-    reset: 0
+    # reset: 0
     states: [ 半,全 ]
+  # - name: ascii_mode
+  #   reset: 0
+  #   states: [ 中,英 ]  
+  # - name: new_hide_pinyin
+  #   reset: 1
+  #   states: [ 音,哑 ]
+  # - name: ascii_punct
+  #   reset: 0
+  #   states: [ 。，,．， ]
 engine:
   filters:
     - lua_filter@new_spelling@spelling
