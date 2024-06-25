@@ -79,7 +79,7 @@ engine:
     - reverse_lookup_translator
     - "table_translator@rvlk1"
     - table_translator
-    # - "table_translator@fixed"  # 暂时无用
+    - "table_translator@fixed"
     - "table_translator@mkst"
     - "table_translator@rvl_zhuyin"
     - "history_translator@history"
@@ -91,9 +91,9 @@ engine:
 
 speller:
   auto_select: false
-  # auto_clear: max_length
+  auto_clear: max_length
   delimiter: "`"
-  # max_code_length: 10000
+  max_code_length: 4
   alphabet: ;zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   initials: ;zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   auto_select_pattern: ^;.$|^\w{4}$
@@ -250,9 +250,9 @@ key_binder:
     # 回车清空编码
     # - {accept: Return, send: Escape, when: composing}
     # - {accept: Return, send: Escape, when: has_menu}
-    # 分号单引号三二候选
-    # - {accept: semicolon, send: 2, when: has_menu}
-    # - {accept: apostrophe, send: 3, when: has_menu}
+    #
+    - {accept: semicolon, send: 2, when: has_menu}
+    - {accept: apostrophe, send: 3, when: has_menu}
     #将小键盘 6~9 .映射到主键盘，数字金额大写的 Lua 如 R1234.5678 可使用小键盘输入
     - {accept: KP_0, send: 0, when: composing}
     - {accept: KP_1, send: 1, when: composing}
