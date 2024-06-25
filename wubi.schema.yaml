@@ -79,7 +79,7 @@ engine:
     - reverse_lookup_translator
     - "table_translator@rvlk1"
     - table_translator
-    - "table_translator@fixed"
+    # - "table_translator@fixed"  # 暂时无用
     - "table_translator@mkst"
     - "table_translator@rvl_zhuyin"
     - "history_translator@history"
