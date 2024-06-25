@@ -158,11 +158,4 @@ recognizer:
     uppercase: "" #中文状态大写锁定直接上屏
     reverse_lookup: "[a-z`]*`+[a-z`]*"
     punct: ""
-
-menu:
-  page_size: 5 #候选项数
-  
-style:
-  horizontal: true #竖排为false
-  inline_preedit: true
   

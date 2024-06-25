@@ -8,7 +8,7 @@ config_version: '2.1'
 schema_list:
   - {schema: wubi}
   - {schema: wubi_pinyin}
-  - {schema: pinyin}
+  - {schema: luna_pinyin_simp}
   - {schema: wb_spelling}
 
 switcher:

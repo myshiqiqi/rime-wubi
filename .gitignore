@@ -33,6 +33,7 @@ installation.yaml
 user.yaml
 settings.json
 *.userdb/
+*.userdb.old
 /*.txt
 /*.custom.yaml
 *.DS_Store

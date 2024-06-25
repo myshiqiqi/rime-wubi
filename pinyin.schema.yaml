@@ -5,7 +5,7 @@
 
 schema:
   schema_id: pinyin
-  name: "纯拼音"
+  name: 拼音
   version: "1.0"
   icon: icons/CN.ico
   ascii_icon: icons/EN.ico
@@ -90,9 +90,5 @@ ci_reverse_lookup:
   dictionary: wubi.extended
   enable_completion: true
   tips: 〈拼音〉  
-
-style:
-  horizontal: true #竖排为false
-  inline_preedit: true
 
   
