@@ -243,6 +243,18 @@ patch:
 |98|27529|9661|6763|515|35.09%|7.61%|
 |新世纪|27529|10060|6763|531|36.54%|7.85%|
 
+### 在五笔中使用辅助码
+
+如果您经常因为无法正确地判断一个字的结构而影响了打字的心流体验，那么使用辅助码替代结构识别码将帮助您在打字事业上更进一层楼。
+
+不足四码的单字最后一码需要提供一个结构码以作识别，而辅助码则是将结构码换成该字读音的首字母，例如，「去、云、支」的全码都是`fcu`，最后一码`u`表示捺区的上下结构编码；而使用辅助码时，「去、云、支」的编码分别是`fcq、fcy、fcz`。如此一来，您将不必再关注单字的字形结构，利用字音即可完成对单字的定位。
+
+当然，这不是一个完美的方案。五笔使用经典的结构码时，可以在不知道一个字的读音下，完成该字的检索与输入，但如果您不能正确地按笔画书写该字，则无法完成正确的输出。而使用辅助码时，则可能因不懂该字的读音而无法正确地输出；诚然，这是一个弊端。那么，使用经典的结构识别码还是使用辅助码，要看您自身的需求——**这很考验您是否真正地掌握了五笔的精髓。**
+
+另外值得一提的是，因为传统五笔每个区位有三个结构码，一共有十五个；而辅助码通过声母与部分元音韵母的结合，一共有二十三个，在同等词库的条件下，重码率可降低百分之一。但辅助码的本意并不是为了降低重码率，而是提供一种区别于结构识别的机制，以供用户选择。
+
+您可以下载[Rime-五笔-音辅版](https://gitee.com/hi-coder/rime-wubi-yinfu)，然后将下载好的内容替换到本方案的目录下（一定要替换，而是不是覆盖哦），或者，通过**中书君**进行一键配置与切换。
+
 
 ## 中书君
 
@@ -311,7 +323,7 @@ patch:
 
 ### 项目镜像地址
 - Gitee 地址：https://gitee.com/hi-coder/rime-wubi
-- Github 地址：https://github.com/mrshiqiqi/rime-wubi
+- Github 地址：https://github.com/myshiqiqi/rime-wubi
 
 ### Rime 输入法引擎
 - Rime 官网：https://rime.im
@@ -326,8 +338,11 @@ patch:
 
 ### 中书君项目
 - Gitee 地址：https://gitee.com/hi-coder/WubiMaster
-- Github 地址：https://github.com/mrshiqiqi/WubiMaster
+- Github 地址：https://github.com/myshiqiqi/WubiMaster
 
+### Rime-五笔-音辅版 
+- Gitee 地址：https://gitee.com/hi-coder/rime-wubi-yinfu
+- Github 地址：https://github.com/myshiqiqi/rime-wubi-yinfu
 ---
 
 赠人玫瑰，手有余香！🌹  
