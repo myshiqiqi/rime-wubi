@@ -1,11 +1,11 @@
 description:
-  color_name: ink
-  display_name: 墨池／Ink
+  color_name: default
+  display_name: 默认／default
   create_time: 2024-04-26 14:15:16
   update_time: 2024-04-26 14:15:16
   is_template: true
 style:
-  color_scheme: ink
+  color_scheme: default
   font_face: Microsoft YaHei
   label_font_face: Microsoft YaHei
   comment_font_face: 黑体字根
@@ -43,8 +43,8 @@ style:
     shadow_offset_y: 4
 
 preset_color_schemes:
-  ink:
-    name: 墨池／Ink
+  default:
+    name: 默认／default
     author: 佛振 <chen.sst@gmail.com>
     text_color: 0x000000
     back_color: 0xffffff
