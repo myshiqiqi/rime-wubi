@@ -36,8 +36,8 @@ style:
     candidate_spacing: 8
     hilite_spacing: 8
     hilite_padding: 8
-    round_corner: 13 
-    corner_radius: 13
+    round_corner: 10 
+    corner_radius: 10
     shadow_radius: 0
     shadow_offset_x: 2
     shadow_offset_y: 2
