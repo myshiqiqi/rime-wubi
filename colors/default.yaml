@@ -1,6 +1,6 @@
 description:
   color_name: default
-  display_name: 默认／default
+  display_name: 默认
   create_time: 2024-04-26 14:15:16
   update_time: 2024-04-26 14:15:16
   is_template: true
@@ -26,26 +26,26 @@ style:
   layout:
     align_type: center
     max_width: 0	
-    min_width: 160
+    min_width: 0
     min_height: 0
     max_height: 0	
-    border_width: 3
-    margin_x: 12
-    margin_y: 12
-    spacing: 10
-    candidate_spacing: 5
-    hilite_spacing: 4
-    hilite_padding: 2
-    round_corner: 4  
-    corner_radius: 4
+    border_width: 2
+    margin_x: 5
+    margin_y: 5
+    spacing: 5
+    candidate_spacing: 8
+    hilite_spacing: 8
+    hilite_padding: 8
+    round_corner: 13 
+    corner_radius: 13
     shadow_radius: 0
-    shadow_offset_x: 4
-    shadow_offset_y: 4
+    shadow_offset_x: 2
+    shadow_offset_y: 2
 
 preset_color_schemes:
   default:
-    name: 默认／default
-    author: 佛振 <chen.sst@gmail.com>
+    name: 默认
+    author: 中书君
     text_color: 0x000000
     back_color: 0xffffff
     border_color: 0x000000
