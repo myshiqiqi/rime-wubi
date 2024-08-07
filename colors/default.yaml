@@ -3,7 +3,7 @@ description:
   display_name: 默认
   create_time: 2024-04-26 14:15:16
   update_time: 2024-04-26 14:15:16
-  is_template: true
+  is_template: 
 style:
   color_scheme: default
   font_face: Microsoft YaHei

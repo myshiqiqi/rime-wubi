@@ -1,0 +1,87 @@
+﻿# Rime settings
+# encoding: utf-8
+# author: 空山明月
+# modify: 中书君
+# time: 2024-08-07 15:06:53.241
+
+description:
+  color_name: Skin-3
+  display_name: 默认三
+  create_time: 2024-08-07 15:06:53.238
+  update_time: 2024-08-07 15:06:53.238
+  is_template: True
+style:
+  antialias_mode: 
+  ascii_tip_follow_cursor: 
+  candidate_abbreviate_length: 
+  click_to_capture: 
+  color_scheme: Skin-3
+  color_scheme_dark: Skin-3
+  comment_font_face: 黑体字根
+  comment_font_point: 15
+  display_tray_icon: false
+  enable_mouse: 
+  enhanced_position: 
+  font_face: 微软雅黑
+  font_point: 15
+  fullscreen: false
+  horizontal: True
+  inline_preedit: True
+  label_font_face: 微软雅黑
+  label_font_point: 15
+  label_format: '%s.'
+  layout:
+    align_type: center
+    border_width: 2
+    candidate_spacing: 10
+    corner_radius: 10
+    hilite_padding: 6
+    hilite_spacing: 4
+    hilite_padding_x: 6
+    hilite_padding_y: 6
+    margin_x: 0
+    margin_y: 0
+    max_height: 0
+    max_width: 0
+    min_height: 0
+    min_width: 0
+    round_corner: 10
+    shadow_offset_x: 2
+    shadow_offset_y: 2
+    shadow_radius: 0
+    spacing: 10
+  mark_text: ''
+  mouse_hover_ms: 
+  paging_on_scroll: 
+  preedit_type: composition
+  vertical_auto_reverse: false
+  vertical_text: False
+  vertical_text_left_to_right: False
+  vertical_text_with_wrap: false
+preset_color_schemes:
+  Skin-3:
+    author: 中书君
+    back_color: 0xFF1E1E1E
+    border_color: 0xFF00B9DD
+    candidate_back_color: 0xFF1E1E1E
+    candidate_border_color: 
+    candidate_shadow_color: 
+    candidate_text_color: 0xFFDCDCDC
+    color_format: abgr
+    comment_text_color: 0xFF929292
+    hilited_back_color: 0xFF1692C4
+    hilited_candidate_back_color: 0xFF00D7FF
+    hilited_candidate_border_color: 
+    hilited_candidate_shadow_color: 
+    hilited_candidate_text_color: 0xFF1E1E1E
+    hilited_comment_text_color: 0xFF2D2D2D
+    hilited_label_color: 0xFF2D2D2D
+    hilited_mark_color: 
+    hilited_shadow_color: 
+    hilited_text_color: 0xFF003B5E
+    label_color: 0xFF929292
+    name: 默认三
+    nextpage_color: 
+    prevpage_color: 
+    shadow_color: 0xFF007891
+    text_color: 0xFFDCDCDC
