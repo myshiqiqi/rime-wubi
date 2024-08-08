@@ -94,8 +94,10 @@ speller:
   auto_clear: max_length
   delimiter: "`"
   max_code_length: 10000
-  alphabet: ;zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
-  initials: ;zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
+  alphabet: ;zyxwvutsrqponmlkjihgfedcba`
+  initials: ;zyxwvutsrqponmlkjihgfedcba`
+  # alphabet: ;zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
+  # initials: ;zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   auto_select_pattern: ^;.$|^\w{4}$
   # algebra:  # 万能z键拼写处理，z符号匹配任意字符
   #   - derive/^(...).$/$1z/
@@ -223,7 +225,7 @@ recognizer:
     punct: "^/([0-9]0?|[A-Za-z]+)$"
     rvlk1: "^z[a-z]*$"
     rvlk2: "^z[a-z]*$"
-    uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
+    # uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
     zhuyin: "~[a-y]*?$"
     helper: '^help$'
