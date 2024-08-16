@@ -115,8 +115,8 @@ translator:
   encode_commit_history: false
   max_phrase_length: 4
   enable_completion: false
-  preedit_format:
-    - 'xlit|abcdefghijklmnopqrstuvwxyz|ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ|'
+  # preedit_format:
+  #   - 'xlit|abcdefghijklmnopqrstuvwxyz|ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ|'
   comment_format:
     - xform/~//                       
     - 'xlit|abcdefghijklmnopqrstuvwxyz|ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ|'
